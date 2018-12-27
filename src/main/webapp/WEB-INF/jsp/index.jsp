@@ -152,7 +152,7 @@
                     <a href="#" title="" target="_blank"><i data-title="课工场">课工场</i></a>
                 </li>
                 <li>
-                    <a href="#" target="_blank"><i data-title="特许经营">特许经营</i></a>
+                    <a href="${pageContext.request.contextPath}/allstudentscorelist" ><i data-title="成绩查询">成绩查询</i></a>
                 </li>
             </ul>
         </div>

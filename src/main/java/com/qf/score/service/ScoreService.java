@@ -2,6 +2,7 @@ package com.qf.score.service;
 
 import com.alibaba.fastjson.JSONObject;
 import com.qf.model.Select_course;
+import com.qf.model.vo.allstudentscore;
 import com.qf.score.dao.ScoreDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -48,6 +49,14 @@ public class ScoreService implements IScoreService {
         jsonObject.put("rows",selectStu);
         return jsonObject;
 
+    }
+
+
+    public List<allstudentscore> allstudentscorelist(){
+
+        List<allstudentscore> allstudentscorelist = dao.allstudentscorelist();
+
+        return allstudentscorelist;
     }
 
 

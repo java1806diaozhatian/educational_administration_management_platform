@@ -77,6 +77,14 @@
     where sc.course_id = #{course_id}
 
     </select>
+    
+    <!--查询所有学生的成绩-->
+    <select id="allstudentscorelist"  resultType="com.qf.model.vo.allstudentscore">
+
+        SELECT c.course_name,s.stu_name,cs.grade,cs.stu_number
+        FROM student s,course c, select_course cs
+        WHERE c.course_id=cs.course_id AND s.stu_number=cs.stu_number
+    </select>
 
     <!--联合查询的结果集-->
     <resultMap id="resultMyStu" type="Select_course">

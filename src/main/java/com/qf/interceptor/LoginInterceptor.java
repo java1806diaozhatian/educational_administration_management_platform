@@ -16,12 +16,14 @@ public class LoginInterceptor implements HandlerInterceptor {
         HttpSession session = httpServletRequest.getSession();
         Student student = (Student)session.getAttribute("student");
         Teacher teacher = (Teacher)session.getAttribute("teacher");
-        if(student == null && teacher == null){
-            httpServletResponse.sendRedirect(httpServletRequest.getContextPath()+"/index");
-            return false;
-        }else {
-            return true;
-        }
+//        if(student == null && teacher == null){
+//            httpServletResponse.sendRedirect(httpServletRequest.getContextPath()+"/index");
+//            return false;
+//        }else {
+//            return true;
+//        }
+        return true;
+
     }
 
     @Override

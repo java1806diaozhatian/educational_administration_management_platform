@@ -2,6 +2,9 @@ package com.qf.score.service;
 
 import com.alibaba.fastjson.JSONObject;
 import com.qf.model.Select_course;
+import com.qf.model.vo.allstudentscore;
+
+import java.util.List;
 
 public interface IScoreService {
 
@@ -12,6 +15,9 @@ public interface IScoreService {
     JSONObject StuList(JSONObject jsonObject);
 
     JSONObject myList(JSONObject jsonObject);
+
+    List<allstudentscore> allstudentscorelist();
+
 
 
 

@@ -3,6 +3,7 @@ package com.qf.score.dao;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.qf.model.Select_course;
+import com.qf.model.vo.allstudentscore;
 
 import java.util.List;
 
@@ -20,6 +21,8 @@ public interface ScoreDao {
      List<Select_course> selectStu(JSONObject jsonObject);
 
      List<Select_course> selectMyStu(JSONObject jsonObject);
+
+     List<allstudentscore> allstudentscorelist();
 
 
 }

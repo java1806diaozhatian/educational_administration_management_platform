@@ -26,7 +26,7 @@ import java.util.UUID;
 @Transactional
 public class PaperServiceImpl implements PaperService {
 
-    private static final String DISK_PATH = "F:/paper/";
+    private static final String DISK_PATH = "D:/paper/";
 
     @Autowired
     private PaperMapper mapper;

@@ -1,9 +1,11 @@
 package com.qf.score.controller;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import com.alibaba.fastjson.JSONObject;
 import com.qf.model.Select_course;
 import com.qf.model.Student;
 import com.qf.model.Teacher;
+import com.qf.model.vo.allstudentscore;
 import com.qf.score.service.IScoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 public class ScoreController {
@@ -78,6 +81,15 @@ public class ScoreController {
         //jsonObject.put("stu_number",2018010101);
         //System.out.println(service.myList(jsonObject));
         return  service.myList(jsonObject);
+
+    }
+
+    @RequestMapping(value = "/allstudentscorelist",method = RequestMethod.GET)
+    public String allstudentscorelist(Model model){
+
+        List<allstudentscore> allstudentscorelist = service.allstudentscorelist();
+        model.addAttribute("allstudentlist",allstudentscorelist);
+        return  "score_list_for_all";
 
     }
 
